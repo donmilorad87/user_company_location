@@ -1,10 +1,11 @@
 import { User } from "./User";
+
 import { Company } from "./Company";
-const amqplib = require('amqplib/callback_api');
+
 import { Map } from "./Map";
 /* import Dexie, { Table } from 'dexie'; */
-import client, { Connection, Channel, ConsumeMessage } from 'amqplib'
-import amqp from 'amqplib/callback_api';
+
+
 
 export class App {
   private user: User
@@ -74,8 +75,8 @@ export class App {
     this.user = new User()
     this.company = new Company()
 
-    choseLocation.addEventListener('click', () => {
-      dialog.showModal()
+    document.getElementById('choseLocation')?.addEventListener('click', () => {
+      document.getElementsByTagName('dialog')[0]?.showModal()
 
       this.map = new Map('dialogMap', this.user, this.company)
 
@@ -86,14 +87,6 @@ export class App {
 
 
 
-    /*  this.rabitMQInit() */
-
   }
-  rabitMQInit() {
 
-
-
-    amqp.connect('amqp://pass:user@192.168.100.24:5672', function (error0, connection) { });
-
-  }
 }

@@ -23,9 +23,8 @@ export class Map {
 
   private GOOGLE_API_KEY: string = process.env.GOOGLE_API_KEY ?? 'no key'
 
+
   constructor(divId: string, private user: User, private company: Company) {
-
-
 
     const loader = new Loader({
       apiKey: this.GOOGLE_API_KEY,
@@ -55,13 +54,11 @@ export class Map {
     });
 
 
-
-
   }
 
 
   async placeMarker(location: { lat: number; lng: number }) {
-    console.log('clicka', location.lat);
+
     const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
 
     const marker = new google.maps.marker.AdvancedMarkerElement({
