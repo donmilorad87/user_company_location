@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script type="module" src="./src/index.ts"> </script>
+  <style>
+    #map {
+      height: 50%;
+    }
+
+    /* 
+ * Optional: Makes the sample page fill the window. 
+ */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="userInfo">
+      <h2>User info: </h2>
+      <form id="userInfoForm">
+        <input type="text" name="name" id="name">
+        <input type="text" name="latLng" id="latLng">
+        <input type="submit" value="submit">
+      </form>
+      <button id="choseLocation"> Chose Location </button>
+    </div>
+
+  </div>
+  <div id="map"></div>
+  <dialog id="dialog" width="50" height="50">
+    <div id="dialogMap"></div>
+  </dialog>
+
+
+
+
+
+
+</body>
+
+</html>
